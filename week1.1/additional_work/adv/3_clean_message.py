@@ -12,9 +12,3 @@ lowercased_message = stripped_message.lower()
 titled_message = lowercased_message.title()
 cleaned_length = len(titled_message)
 print(f"Here is the original mesage: {raw_message}, and here is the cleaned version: {titled_message}, original length ={raw_length}, cleaned length ={cleaned_length}")
-
-
-# TODO: apply a sequence of string methods to produce a cleaned_message
-# Example methods: strip, title, replace, lower, upper
-# TODO: display the original and cleaned messages
-# Extension: display the character counts for each version

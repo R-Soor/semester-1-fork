@@ -13,7 +13,7 @@ while valid_distance==False:
     distance_miles_input = float(input("How many miles will you travel? "))
     if distance_miles_input<=0:
       valid_distance=False
-  except:
+  except ValueError:
     print("Please enter distance as a decimal or integer")
     valid_distance=False
 valid_time=False
@@ -23,7 +23,7 @@ while valid_time==False:
     time_hours_input = float(input("How many hours will the journey take? "))
     if time_hours_input<=0:
       valid_time=False
-  except:
+  except ValueError:
     print("Please enter time as a integer or decimal")
 avg_speed=distance_miles_input/time_hours_input
 print(f"The approximate average speed for the journey to {destination} will be {avg_speed:.2f}mph.")

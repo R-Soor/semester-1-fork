@@ -4,11 +4,32 @@
 - Use try/except to catch both non-numeric input and division by zero, giving useful messages for each case.
 - Only print the final answer when the calculation succeeds.
 """
+valid_inputs=False
+while valid_inputs==False:
+    valid_numerator=False
+    while valid_numerator==False:
+        valid_numerator=True
+        try:
+            numerator_input = int(input("Enter the numerator: "))
+        except ValueError:
+            print("Please enter your numerator as an integer")
+            valid_numerator=False
+    valid_denominator=False
+    while valid_denominator==False:
+        valid_denominator=True
+        try:
+            denominator_input = int(input("Enter the denominator: "))
+            if denominator_input==0:
+                print("Can't divide by 0")
+                valid_denominator=False
+        except ValueError:
+            print("Please enter your denominator as an integer")
+            valid_denominator=False
+    if valid_denominator and valid_numerator:
+        valid_inputs=True
+division=numerator_input/denominator_input
+print(f"The result of your division is {division}")
 
-numerator_input = input("Enter the numerator: ")
-denominator_input = input("Enter the denominator: ")
+    
 
-# TODO: wrap the risky operations in a try/except block
-# TODO: convert the values to integers and perform the division
-# TODO: print clear feedback when something goes wrong
-# TODO: only show the answer when the division succeeds
+
