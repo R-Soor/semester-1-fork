@@ -1,16 +1,15 @@
-# To test that you can successfully download a file and upload it to gradescope
+halt=False
+try:
+    num1=int(input("Please enter your first number"))
+except ValueError:
+    print("That is not a number")
+    halt=True
 
-# You are going to write a very simple program:
+try:
+    num2=int(input("Please enter you second number"))
+except ValueError:
+    print("That is not a number")
+    halt=True
 
-# Ask a user to enter two numbers (one per input)
-
-# multiply those numbers together
-
-# print out the result
-
-# There is an extra point available for validating that they entered numbers!
-# Add to your code so that if they entered something other than an integer it prints
-# 'That is not a number' and exits.
-
-# Download your file, and upload it to the 'Week 1 Session 2 - Practice Upload' task on Minerva.
-# You will get some feedback - ensure you are passing the tests!
+if halt==False:
+    print(num1*num2)
