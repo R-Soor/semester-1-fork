@@ -7,7 +7,11 @@
 
 destination = input("Where are you going to? ")
 
-distance_miles_input = input("How many miles will you travel? ")
+distance=False
+while distance==False:
+  try:
+    distance_miles_input = input("How many miles will you travel? ")
+  except:
 time_hours_input = input("How many hours will the journey take? ")
 
 # TODO: convert distance_miles_input and time_hours_input to numbers
