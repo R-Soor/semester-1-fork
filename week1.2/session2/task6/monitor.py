@@ -5,14 +5,6 @@
 #### Pressure
 ### Step 3: Determine Status
 
-If the machine is currently operating, then if either temperature is too
-high or pressure is too high, alert that the machine is running in unsafe
-conditions and recommend shutting it down.
-
-If everything is normal, indicate that the machine is running normally.
-
-If the machine is not currently operating, indicate that it is stopped and
-no immediate action is needed.
 
 temperature=int(input("Please enter the machine's temperature in degrees Celsius"))
 pressure=int(input("Please enter the machine's pressure in PSI"))
