@@ -28,4 +28,8 @@ for i in range (0, len(numbers)-1):
 
 print(f"Minimum = {min}")
 print(f"Maximum = {max}")
-print(f"Mean = {sum/len(numbers)}")
+print(f"Mean = {sum/
+#
+# 
+# 
+# len(numbers)}")
