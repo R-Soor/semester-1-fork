@@ -6,11 +6,11 @@ try:
     grade=int(input("Please enter a grade in the range 0 to 100"))
 except ValueError:
     is_valid=False
-    print("Error: graded must be an integer between 0 and 100")
-    sys.exit("Error!")
+    print("Error: Grade must be an integer between 0 and 100")
+    sys.exit()
 if grade>100 or grade<0:
     print("Error: Grade must be an integer between 0 and 100")
-    sys.exit("Error!")
+    sys.exit()
 elif grade>=70:
     print(f"{grade} is a Distinction")
 elif grade<=39:
