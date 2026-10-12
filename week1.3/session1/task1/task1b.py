@@ -8,5 +8,8 @@ while fruit:
 
 
 # Why does this work?
+#Only loops while fruit still has a value
+
 
 # What features of Python does it rely on?
+#While loop and .pop() to return the end value of the list
