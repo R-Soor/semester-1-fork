@@ -9,13 +9,11 @@ states_list=list(states)
 systime = 0
 
 maxtime = int(input("Input number of steps (>0)"))  # read an integer number of steps (>0)
-print(states["red"])
 states_list_index=0
 light_time = 0
 state = "red"
 prev_state = ""
-print(states_list)
-while systime<maxtime:
+while systime<maxtime+1:
     if prev_state=="":
         light_time=states[state]
         prev_state=state
