@@ -15,3 +15,13 @@
 # story.txt - 290
 # story2.txt - 326
 # glasses.txt - 210
+filename = input("Please enter the name of the file you would like to open")
+numbers=0
+with open(filename, "r") as openfile:
+    for line in openfile:
+        line = str(line)
+        for char in line:
+            if char.isnumeric():
+                numbers+=1
+
+print(numbers)
