@@ -13,5 +13,7 @@ for i in values:
 
 print(newval)
 
+even_double = [num*2 for num in values if num%2==0]
+print(even_double)
 # write the list comprehension equivalent to the `for` loop
 
