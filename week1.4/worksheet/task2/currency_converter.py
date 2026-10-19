@@ -21,7 +21,9 @@ def currency_converter(amount, from_currency, to_currency):
     # your code here
 
     return None
-
+amount=int(input("Please enter the amount you want to convert"))
+original_currency=("What currency is this value currently in")
+new_currency=("What currency would you like to convert it to")
 # Submit only this file currency_converter.py with the completed function.
 
 # Remove any additional code you may have added during development and testing.
