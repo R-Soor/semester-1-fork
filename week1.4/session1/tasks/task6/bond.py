@@ -16,7 +16,19 @@ def isBond(intList):
     # meaning you need to delete pass to write your code.
     # Nothing happens when pass is executed.
 
-    pass     # delete pass to write your code
+    matching_sequence = [0,0,7]
+    current_sequence = []
+    index=0
+    has_matched=False
+    for i in range (0, len(intList)):
+        if has_matched==False:
+            if intList[i]==matching_sequence[index]:
+                current_sequence.append(intList[i])
+                index+=1
+                if current_sequence==matching_sequence:
+                    has_matched=True
+    return has_matched
+            
 
 # Check if the following lines of code produce the correct output
 print(isBond([1, 2, 4, 0, 0, 7, 5]))   # True

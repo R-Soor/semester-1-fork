@@ -11,6 +11,11 @@
 # function implementation
 
 def mystery_func(string):
+    """
+    Takes in a string as input
+    Loops through the string and counts the number of upper and lower characters
+    Then the number of each is retruned back
+    """ 
     upper = 0
     lower = 0
 
