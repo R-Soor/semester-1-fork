@@ -17,19 +17,16 @@ def currency_converter(amount, from_currency, to_currency):
         'PHP': {'CNY': 0.12, 'GBP': 0.01, 'INR': 1.45},
         'INR': {'PHP': 0.69, 'CNY': 0.09, 'GBP': 0.01}
     }
-    if amount<=0:
-        final_conversion=0.0
-    else:
-        rate=conversion_rate[from_currency][to_currency]
-        final_conversion=amount*rate
-        final_conversion=round(final_conversion, 2)
-    # your code here
+
+    rate=conversion_rate[from_currency][to_currency]
+    final_conversion=amount*rate
+    final_conversion=round(final_conversion, 2)
 
     return final_conversion
 amount=float(input("Please enter the amount you want to convert"))
-original_currency=input("What currency is this value currently in")
-new_currency=input("What currency would you like to convert it to")
-print(currency_converter(amount, original_currency, new_currency))
-# Submit only this file currency_converter.py with the completed function.
-
-# Remove any additional code you may have added during development and testing.
+if amount<=0:
+    print(0.0)
+else:
+    original_currency=input("What currency is this value currently in")
+    new_currency=input("What currency would you like to convert it to")
+    print(currency_converter(amount, original_currency, new_currency))
