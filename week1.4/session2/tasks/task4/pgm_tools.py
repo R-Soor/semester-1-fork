@@ -38,20 +38,28 @@ def invertPGM( image ):
     Invert an image, ie. pixel value = 255 - pixel value
     Input: image data
     Output: inverted image data
+
     '''
     width,height,max_gray,pixels = image  # unpack the tuple
-
+    for i in range (0, len(pixels)):
+        new_pixel_row=[]
+        for pixel_value in pixels[i]:
+            new_pixel_value = 255-pixel_value
+            new_pixel_row.append(new_pixel_value)
+        pixels[i]=new_pixel_row
     # your code
     # create a new pixel array of inverted data 
     inverted = []  # you can use a similar nested comprehension to the readPGM() function
-    
+    print(pixels)
     return width,height,max_gray,inverted
 
 # code to test the PGM functions
 
 image = readPGM("images/feep.pgm")
 
-print(f"Image with width {image[0]} and height {image[1]}")
+#print(f"Image with width {image[0]} and height {image[1]}")
 print(f"{image[3]}")
+
+invertPGM(image)
 
 # write further code to test your own functions
