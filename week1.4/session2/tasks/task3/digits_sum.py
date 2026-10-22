@@ -17,6 +17,21 @@ def digits_sum(number):
     Returns:
         int: The sum of the digits of the input integer.
     """
+    print(number)
+    number=str(number)
+    if len(number)<=1:
+        sum=int(number)
+        return sum
+    else:
+        new_string=""
+        for char in new_string:
+            if len(new_string)==len(number)-1:
+                new_string=number
+                return int(char)+ digits_sum(number)
+            else:
+                new_string=new_string+char
+    
+print(digits_sum(987))
     # complete your code here
     # base case
 

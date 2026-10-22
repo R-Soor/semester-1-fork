@@ -23,10 +23,10 @@ def currency_converter(amount, from_currency, to_currency):
     final_conversion=round(final_conversion, 2)
 
     return final_conversion
-amount=float(input())
+amount=float(input("Please enter the amount you want to convert"))
 if amount<=0:
     print(0.0)
 else:
-    original_currency=input()
-    new_currency=input()
+    original_currency=input("What currency is this value currently in")
+    new_currency=input("What currency would you like to convert it to")
     print(currency_converter(amount, original_currency, new_currency))
