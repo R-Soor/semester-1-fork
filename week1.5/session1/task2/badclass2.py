@@ -2,6 +2,7 @@
 
 # What does the runtime error mean?
 # How do we fix the code?
+# Need to also define the attributes by also making them start with .self
 
 class Point:
     """
