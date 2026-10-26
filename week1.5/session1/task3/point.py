@@ -15,13 +15,16 @@ class Point:
         """
         self.x = x_coordinate
         self.y = y_coordinate
+    # Add distance() method here
 
     def distance(self):
         """
         Returns distance from this Point to origin.
         """
         return math.hypot(self.x, self.y)
-    
+    # Add distance_to() method here 
+    # (This will need a parameter representing another point)
+
     def distance_to(self, other_x, other_y):
         """
         Returns distance from this Point to another Point.
@@ -32,21 +35,23 @@ class Point:
             x_diff = other_x - self.x
         else:
             x_diff = 0
-
+        
         if self.y > other_y:
             y_diff = self.y - other_y
         elif self.y < other_y:
             y_diff = other_y - self.y
         else:
             y_diff = 0
-
         return math.hypot(x_diff, y_diff)
 
-    # Add distance() method here
-
-    # Add distance_to() method here
-    # (This will need a parameter representing another point)
 
 
 
 # Finally, add code here to demonstrate use of Point
+first_point = Point(5,4)
+
+second_point = Point(5,4)
+
+print(first_point.distance())
+print(second_point.distance())
+print(first_point.distance_to(second_point.x, second_point.y))
