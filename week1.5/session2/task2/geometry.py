@@ -32,6 +32,7 @@ class Point:
         return math.hypot(self.x - p.x, self.y - p.y)
 
     # Implement a __str__() method here
+    def __str__(self):
 
 
 class Circle:
