@@ -1,12 +1,11 @@
 # Worksheet 1.5: Person class
-
-from datetime import datetime
+from datetime import date
 
 class Person:
     """
     Person class with a string name and a date of birth
     """
-    def __init__(self, name:str, birth:datetime):
+    def __init__(self, name:str, birth:date):
         """
         A Person, with a name and a date of birth.
         """
@@ -15,14 +14,9 @@ class Person:
             raise TypeError("Name must be a string")
         elif name=="":
             raise ValueError("Name must not be blank")
-        try:
-            birth = datetime.strptime(birth, "%Y-%M-%D")
-        except:
-            TypeError("Birth must be in date format")
+        if not isinstance(birth,date):
+            raise TypeError("Birth must be in date format")
 
-#        if not isinstance(birth,date):
-#            raise TypeError("Birth must be in date format")
-        
         self.name=name
         self.birth=birth
     def initials(self):
@@ -43,12 +37,7 @@ class Person:
         """
         Returns true if today is equal to the persons birthday
         """
-        print(self.birth)
-        if datetime.today()==self.birth:
+        if date.today().month==self.birth.month and date.today().day==self.birth.day:
             return True
         else:
             return False
-
-
-p = Person("alan david jones",(2007,12,16))
-print(p.initials())
