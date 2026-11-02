@@ -36,7 +36,9 @@ class QuakeDataset:
         # Write code here to replace existing data with new earthquake data.
         # Use the value returned by the feed's reader() method as the
         # subject of a for loop.
-
+        reader = self.feed.reader()
+        for value in reader:
+            
         # Keep in mind that the items obtained by this for loop will be
         # dictionaries. You will need to extract the required values from
         # each dictionary and convert them into the required types before
@@ -69,6 +71,7 @@ class QuakeDataset:
         """
         Returns the mean magnitude of the quakes in this dataset.
         """
+        
         # Write code here that computes the mean magnitude of all the
         # quakes currently in the dataset
 
