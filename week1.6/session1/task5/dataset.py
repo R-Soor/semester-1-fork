@@ -36,8 +36,21 @@ class QuakeDataset:
         # Write code here to replace existing data with new earthquake data.
         # Use the value returned by the feed's reader() method as the
         # subject of a for loop.
+        self.data=[]
         reader = self.feed.reader()
         for value in reader:
+#                when: datetime
+#                longitude: float
+#                latitude: float
+#                depth: float
+#                magnitude: float
+            when = value["time"]
+            long = value["longitude"]
+            lat = value["latitude"]
+            dep = value["depth"]
+            magnitude = value["mag"]
+            q = Quake(when,long,lat,magnitude)
+            self.data.append(q)
             
         # Keep in mind that the items obtained by this for loop will be
         # dictionaries. You will need to extract the required values from
