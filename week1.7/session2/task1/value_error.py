@@ -2,7 +2,7 @@
 
 # Run this program and observe what happens
 
-user_profile = {"username": "alice99", "role": "admin"}
+user_profile = {"username": "alice99","role": "admin"}
 
-for key, value in user_profile:
-	print(f"{key} : {value}")
+for key in user_profile:
+	print(f"{key} : {user_profile[key]}")
