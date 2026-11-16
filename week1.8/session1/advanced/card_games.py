@@ -56,11 +56,18 @@ class Deck:
 
     def shuffle(self):
         """Shuffles this deck randomly."""
-        # NEEDS COMPLETING
+        random.shuffle(self.deck)
 
     def deal(self):
         """Removes top card from this deck and returns it."""
-        # NEEDS COMPLETING
+        return_card=self.deck[0]
+        self.deck.remove(return_card)
+        return return_card
+    
+    def get_rank(self, card):
+        """ Gets the rank of a given card"""
+        return card.rank
+    
 
     def __len__(self):
         return len(self.deck)
@@ -69,4 +76,3 @@ class Deck:
         return "\n".join(str(c) for c in self.deck)
 
 
-# Implement a card game!
