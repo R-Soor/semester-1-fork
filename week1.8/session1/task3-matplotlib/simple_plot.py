@@ -1,5 +1,6 @@
 
 import matplotlib.pyplot as plt  # import library
+import pandas as pd
 
 x = [ k for k in range(10) ]  # create a range for the data
 y = [ k*k for k in x ]      # create a simple function y=x^2
