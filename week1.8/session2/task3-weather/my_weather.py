@@ -3,7 +3,7 @@ import httpx
 import pandas as pd
 import matplotlib.pyplot as plt
 
-api_key="U6KXJTZC2E8VGH39PD7UMG4BZ"   # your API key
+api_key="5VV9Q6UP8X963DJDS5X35TQK6"   # your API key
 
 city="Leeds"     # city location
 country="UK"     # country location
@@ -40,6 +40,9 @@ df = pd.DataFrame(temp_data)
 # using matplotlib plot the 3 data sets: (tempmin,temp,tempmax) as line graphs
 
 df.plot()
+
+plt.xlabel("Days")
+plt.ylabel("Temperature (*F)")
 
 plt.show()
 
