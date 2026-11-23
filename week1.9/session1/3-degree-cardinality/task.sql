@@ -12,3 +12,11 @@
 
 -- And to see a count of the total number of tuples
 SELECT COUNT(*) as Cardinality FROM customers; 
+
+SELECT COUNT(*) as Customers FROM customers;
+SELECT COUNT(*) as Drivers FROM drivers;
+SELECT COUNT(*) as Menu_items FROM menu_items;
+SELECT COUNT(*) as Order_items FROM order_items;
+SELECT COUNT(*) as Orders FROM orders;
+SELECT COUNT(*) as Restaurants FROM restaurants;
+SELECT COUNT(*) as Reviews FROM reviews;
