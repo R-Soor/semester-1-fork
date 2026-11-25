@@ -1,9 +1,9 @@
-
+import random
 import httpx
 
-base_url = "https://dummyjson.com/"
+base_url = "https://dummyjson.com/products/search?q=apple"
 
-content = "posts/1"
+content = ""
 
 url = base_url + content  # API request
 
@@ -14,3 +14,4 @@ print(response.status_code)   # HTTP response
 content = response.json()   # JSON data
 
 print(content)
+
