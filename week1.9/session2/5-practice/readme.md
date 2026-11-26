@@ -29,6 +29,12 @@ Create the `Branch` relation using `CREATE TABLE Branch(...);` with appropriate 
     - `branch_id` is integer, descriptive data is text
 - Think about whether data can be NULL
     - eg. Branch address data should not be NULL
+CREATE TABLE Branch (
+    branch_id   INTEGER PRIMARY KEY,
+    street  TEXT,
+    city    TEXT,
+    postcode    TEXT,
+);
 
 Test the `Branch` relation:
 - visualise using `SELECT * FROM Branch;`
@@ -39,6 +45,9 @@ Test the `Branch` relation:
 Add some data using `INSERT INTO Branch (...) VALUES (...);` with appropriate attributes and values
 - eg. values `(1,'Shaw Lane','Leeds','LS6 5UL')`
 - be careful with single quotes for 'text' (not " or `)
+
+INSERT INTO Branch (branch_id, street, city, postcode)
+VALUES (1, 'Shaw Lane', 'Leeds', 'LS6 5UL');
 
 Test the `Branch` relation:
 - visualise using `SELECT * FROM Branch;`
@@ -58,6 +67,13 @@ Create the `Staff` relation
 - `branch` is a foreign key, linked to `branch_id` in the `Branch` relation
     - add the annotation to the `Staff` relation (see the existing schema for an example)
 
+CREATE TABLE Staff (
+    staff_id    INTEGER PRIMARY KEY,
+    name    TEXT NOT NULL,
+    role    TEXT,
+    FOREIGN KEY (branch) REFERENCES Branch(branch_id)
+);
+
 Test the `Staff` relation.
 - Test your design using `SELECT * FROM Staff;`
 
@@ -67,6 +83,9 @@ Add some data using `INSERT INTO Staff (...) VALUES (...);`
 - use appropriate attributes and choose some values for them, with `role` and `branch` both `NULL` initially.
 - eg. values `(101,'Tom',NULL,NULL)`
 - in reality we would first create a staff record then later allocate role and branch
+
+INSERT INTO Staff(staff_id, name, role, branch)
+VALUES (101, 'Tom', NULL, NULL);
 
 Test the `Branch` relation:
 - visualise using `SELECT * FROM Staff;`

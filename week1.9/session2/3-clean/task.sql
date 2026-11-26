@@ -7,3 +7,6 @@
 
 -- YOU SHOULD RUN ANY 'UPDATES' AS SELECTS FIRST - it's very easy to accidentally update more than you intended..
 
+DELETE FROM customers 
+WHERE email LIKE '%@test.com';
+
